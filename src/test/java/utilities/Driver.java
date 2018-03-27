@@ -22,8 +22,9 @@ public class Driver {
 			case "chrome":
 				WebDriverManager.chromedriver().setup();
 				 ChromeOptions option = new ChromeOptions();
-				    option.addArguments("disable-infobars");
-				    option.addArguments("start-fullscreen");
+				    option.addArguments("--disable-infobars");
+				    option.addArguments("--start-fullscreen");
+				    option.addArguments("--no-sandbox");
 				    driver = new ChromeDriver(option);
 				break;
 			case "ie":
@@ -36,8 +37,9 @@ public class Driver {
 			default:
 			     WebDriverManager.chromedriver().setup();
 				 ChromeOptions options = new ChromeOptions();
-				 options.addArguments("disable-infobars");
-				 options.addArguments("start-fullscreen");
+				 options.addArguments("--disable-infobars");
+				 options.addArguments("--start-fullscreen");
+				 options.addArguments("--no-sandbox");
 				 driver = new ChromeDriver(options);
 			}
 		}
