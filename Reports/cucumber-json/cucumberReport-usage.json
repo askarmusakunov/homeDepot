@@ -1,0 +1,38 @@
+[
+  {
+    "source": "^I am on the HomeDepot home page$",
+    "steps": [
+      {
+        "name": "I am on the HomeDepot home page",
+        "aggregatedDurations": {
+          "average": 32.327366311,
+          "median": 32.327366311
+        },
+        "durations": [
+          {
+            "duration": 32.327366311,
+            "location": "positive_login.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I login as a user with \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "I login as a user with \"heartless_oskar@mail.ru\" and \"oscar94.\"",
+        "aggregatedDurations": {
+          "average": 21.815348459,
+          "median": 21.815348459
+        },
+        "durations": [
+          {
+            "duration": 21.815348459,
+            "location": "positive_login.feature:12"
+          }
+        ]
+      }
+    ]
+  }
+]

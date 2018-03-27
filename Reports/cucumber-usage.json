@@ -1,0 +1,92 @@
+[
+  {
+    "source": "^I am on the HomeDepot home page$",
+    "steps": [
+      {
+        "name": "I am on the HomeDepot home page",
+        "aggregatedDurations": {
+          "average": 12.278790319,
+          "median": 12.278790319
+        },
+        "durations": [
+          {
+            "duration": 12.278790319,
+            "location": "positive_login.feature:11"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should be able to verify that I logged in$",
+    "steps": [
+      {
+        "name": "I should be able to verify that I logged in",
+        "aggregatedDurations": {
+          "average": 3.098424325,
+          "median": 3.098424325
+        },
+        "durations": [
+          {
+            "duration": 3.098424325,
+            "location": "positive_login.feature:13"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I hover over Shopping links$",
+    "steps": [
+      {
+        "name": "I hover over Shopping links",
+        "aggregatedDurations": {
+          "average": 9.17524155,
+          "median": 9.17524155
+        },
+        "durations": [
+          {
+            "duration": 9.17524155,
+            "location": "positive_login.feature:14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I login as a user with \"([^\"]*)\" and \"([^\"]*)\"$",
+    "steps": [
+      {
+        "name": "I login as a user with \"heartless_oskar@mail.ru\" and \"oscar94.\"",
+        "aggregatedDurations": {
+          "average": 8.967228304,
+          "median": 8.967228304
+        },
+        "durations": [
+          {
+            "duration": 8.967228304,
+            "location": "positive_login.feature:12"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^I should be able to see dropDowns$",
+    "steps": [
+      {
+        "name": "I should be able to see dropDowns",
+        "aggregatedDurations": {
+          "average": 0.096276911,
+          "median": 0.096276911
+        },
+        "durations": [
+          {
+            "duration": 0.096276911,
+            "location": "positive_login.feature:15"
+          }
+        ]
+      }
+    ]
+  }
+]

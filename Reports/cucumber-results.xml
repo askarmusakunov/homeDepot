@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="58.498748">
+<testcase classname="positive login functionality" name="Check all Shopping Link Hoverovers" time="58.498748">
+<failure message="junit.framework.ComparisonFailure: expected:&lt;[Welcome]&gt; but was:&lt;[My Account]&gt;&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:100)&#10;&#9;at junit.framework.Assert.assertEquals(Assert.java:107)&#10;&#9;at stepdefinitions.SignInStep_Def.i_should_be_able_to_verify_that_I_logged_in(SignInStep_Def.java:38)&#10;&#9;at ✽.Then I should be able to verify that I logged in(positive_login.feature:13)&#10;"><![CDATA[Given I am on the HomeDepot home page.......................................passed
+When I login as a user with "heartless_oskar@mail.ru" and "oscar94."........passed
+Then I should be able to verify that I logged in............................failed
+When I hover over Shopping links............................................skipped
+Then I should be able to see dropDowns......................................skipped
+
+StackTrace:
+junit.framework.ComparisonFailure: expected:<[Welcome]> but was:<[My Account]>
+	at junit.framework.Assert.assertEquals(Assert.java:100)
+	at junit.framework.Assert.assertEquals(Assert.java:107)
+	at stepdefinitions.SignInStep_Def.i_should_be_able_to_verify_that_I_logged_in(SignInStep_Def.java:38)
+	at ✽.Then I should be able to verify that I logged in(positive_login.feature:13)
+]]></failure>
+</testcase>
+</testsuite>

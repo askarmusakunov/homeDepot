@@ -1,0 +1,31 @@
+@SmokeTest
+Feature: positive login functionality
+
+  #@login_user
+  #Scenario: Login as a user
+  #Given I am on the HomeDepot home page
+  #When I login as a user
+  #Then I should be able to verify that I logged in
+  @smoke
+  Scenario Outline: Check all Shopping Link Hoverovers     [90m# positive_login.feature:10[0m
+    [36mGiven [0m[36mI am on the HomeDepot home page[0m
+    [36mWhen [0m[36mI login as a user with "<email>" and "<password>"[0m
+    [36mThen [0m[36mI should be able to verify that I logged in[0m
+    [36mWhen [0m[36mI hover over Shopping links[0m
+    [36mThen [0m[36mI should be able to see dropDowns[0m
+
+    Examples: 
+
+  @smoke @SmokeTest
+  Scenario Outline: Check all Shopping Link Hoverovers                   [90m# positive_login.feature:18[0m
+    [32mGiven [0m[32mI am on the HomeDepot home page[0m                                [90m# SignInStep_Def.i_am_on_the_HomeDepot_home_page()[0m
+    [32mWhen [0m[32mI login as a user with "[0m[32m[1mheartless_oskar@mail.ru[0m[32m" and "[0m[32m[1moscar94.[0m[32m"[0m [90m# SignInStep_Def.i_login_as_a_user_with_and(String,String)[0m
+    [31mThen [0m[31mI should be able to verify that I logged in[0m                     [90m# SignInStep_Def.i_should_be_able_to_verify_that_I_logged_in()[0m
+      [31mjunit.framework.ComparisonFailure: expected:<[Welcome]> but was:<[My Account]>
+      	at junit.framework.Assert.assertEquals(Assert.java:100)
+      	at junit.framework.Assert.assertEquals(Assert.java:107)
+      	at stepdefinitions.SignInStep_Def.i_should_be_able_to_verify_that_I_logged_in(SignInStep_Def.java:38)
+      	at ✽.Then I should be able to verify that I logged in(positive_login.feature:13)
+      [0m
+    [36mWhen [0m[36mI hover over Shopping links[0m                                     [90m# SignInStep_Def.i_hover_over_Shopping_links()[0m
+    [36mThen [0m[36mI should be able to see dropDowns[0m                               [90m# SignInStep_Def.i_should_be_able_to_see_dropDowns()[0m

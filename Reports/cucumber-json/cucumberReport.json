@@ -1,0 +1,111 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 18,
+        "name": "Check all Shopping Link Hoverovers",
+        "description": "",
+        "id": "positive-login-functionality;check-all-shopping-link-hoverovers;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 32327366311,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am on the HomeDepot home page",
+            "match": {
+              "location": "SignInStep_Def.i_am_on_the_HomeDepot_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 21815348459,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I login as a user with \"heartless_oskar@mail.ru\" and \"oscar94.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "heartless_oskar@mail.ru",
+                  "offset": 24
+                },
+                {
+                  "val": "oscar94.",
+                  "offset": 54
+                }
+              ],
+              "location": "SignInStep_Def.i_login_as_a_user_with_and(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              1
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 4356033424,
+              "error_message": "junit.framework.ComparisonFailure: expected:\u003c[Welcome]\u003e but was:\u003c[My Account]\u003e\n\tat junit.framework.Assert.assertEquals(Assert.java:100)\n\tat junit.framework.Assert.assertEquals(Assert.java:107)\n\tat stepdefinitions.SignInStep_Def.i_should_be_able_to_verify_that_I_logged_in(SignInStep_Def.java:38)\n\tat ✽.Then I should be able to verify that I logged in(positive_login.feature:13)\n",
+              "status": "failed"
+            },
+            "line": 13,
+            "name": "I should be able to verify that I logged in",
+            "match": {
+              "location": "SignInStep_Def.i_should_be_able_to_verify_that_I_logged_in()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "I hover over Shopping links",
+            "match": {
+              "location": "SignInStep_Def.i_hover_over_Shopping_links()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "I should be able to see dropDowns",
+            "match": {
+              "location": "SignInStep_Def.i_should_be_able_to_see_dropDowns()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@smoke"
+          },
+          {
+            "line": 1,
+            "name": "@SmokeTest"
+          }
+        ]
+      }
+    ],
+    "name": "positive login functionality",
+    "description": "",
+    "id": "positive-login-functionality",
+    "keyword": "Feature",
+    "uri": "positive_login.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@SmokeTest"
+      }
+    ]
+  }
+]
