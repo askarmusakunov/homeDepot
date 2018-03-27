@@ -2,9 +2,7 @@ package stepdefinitions;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+
 import org.openqa.selenium.interactions.Actions;
 
 import cucumber.api.java.en.Given;
@@ -13,10 +11,9 @@ import cucumber.api.java.en.When;
 import junit.framework.Assert;
 import pages.HomePage;
 import utilities.Config;
-import utilities.Driver;
 import utilities.Page;
 import static utilities.Driver.getDriver;
-public class SignInTest {
+public class SignInStep_Def {
 	
 	HomePage homePage;
 	Actions action;
@@ -29,9 +26,9 @@ public class SignInTest {
 	    Assert.assertEquals("HomePage title verification failed", Config.getProperty("homeTitle"), getDriver().getTitle());
 	}
 
-	@When("^I login as a user$")
-	public void i_login_as_a_user()  {
-	    homePage.sign_in(Config.getProperty("userEmail"), Config.getProperty("userPassword"));
+	@When("^I login as a user with \"([^\"]*)\" and \"([^\"]*)\"$")
+	public void i_login_as_a_user_with_and(String email, String password) throws Throwable {
+	    homePage.sign_in(email, password);
 	}
 
 	@Then("^I should be able to verify that I logged in$")
@@ -51,6 +48,15 @@ public class SignInTest {
 	@Then("^I should be able to see dropDowns$")
 	public void i_should_be_able_to_see_dropDowns() {
 	    action.moveToElement(homePage.rugsLink).perform();
+	}
+	@When("^I search for \"([^\"]*)\"$")
+	public void i_search_for(String itemName)  {
+	    homePage.searchItem(itemName);
+	}
+
+	@Then("^I verify results for message$")
+	public void i_verify_results_for_message()  {
+	    homePage.getProductCount();
 	}
 
 	

@@ -64,6 +64,14 @@ public class HomePage {
 	@FindBy(xpath="//a[.='Living Room']")
 	WebElement livingRoomLink;
 	
+	@FindBy(id="headerSearch")
+	WebElement searchBox;
+	
+	@FindBy(id="allProdCount")
+	WebElement prodCount;
+	
+	@FindBy(id="headerSearchButton")
+	WebElement searchButton;
 	
 	public void sign_in(String email, String password) {
 		myAccountLink.click();
@@ -109,5 +117,19 @@ public class HomePage {
 			link = shoppingLinks.findElement(By.xpath("//a[text()='Local Ad' and @class='ShoppingLinks__link']/.."));
 		}
 		
+	}
+	
+	public void searchItem(String itemName) {
+		if(!itemName.isEmpty()) {
+			searchBox.sendKeys(itemName);
+			searchButton.click();
+		}
+		else {
+			System.out.println("Invalid text sent");
+		}
+	}
+	
+	public String getProductCount() {
+		return prodCount.getText().trim();
 	}
 }

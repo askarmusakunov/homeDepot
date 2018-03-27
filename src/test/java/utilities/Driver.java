@@ -8,31 +8,33 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Driver {
 	private static WebDriver driver;
 	public static WebDriver getDriver() {
 		if(driver == null || ((RemoteWebDriver) driver).getSessionId() == null) {
-			switch(Config.getProperty("browser")) {
+			switch(Config.getProperty("browser").toLowerCase()) {
 			case "firefox":
-				System.setProperty("webdriver.gecko.driver", Config.getProperty("firefox"));
+				WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 				break;
 			case "chrome":
-				System.setProperty(Config.getProperty("webdriver"), Config.getProperty("driverPath"));
+				WebDriverManager.chromedriver().setup();
 				 ChromeOptions option = new ChromeOptions();
 				    option.addArguments("disable-infobars");
 				    option.addArguments("start-fullscreen");
 				    driver = new ChromeDriver(option);
 				break;
 			case "ie":
-				System.setProperty("webdriver.gecko.driver", Config.getProperty("ie"));
+				WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
 				break;
 			case "safari":
 					driver = new SafariDriver();
 					break;
 			default:
-				System.setProperty(Config.getProperty("webdriver"), Config.getProperty("driverPath"));
+			     WebDriverManager.chromedriver().setup();
 				 ChromeOptions options = new ChromeOptions();
 				 options.addArguments("disable-infobars");
 				 options.addArguments("start-fullscreen");
@@ -46,6 +48,5 @@ public class Driver {
 			if (driver != null) {
 				driver.quit();
 			}
-
 		}
 }
